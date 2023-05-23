@@ -20,7 +20,8 @@ php artisan code:models
 php artisan make:controller PostController
 
 Ir al directorio: app/Http/Controllers y editar el archivo PostController
-[
+
+```
 <?php
 
 namespace App\Http\Controllers;
@@ -36,11 +37,13 @@ class PostController extends Controller
         return view('posts.index', ['posts' => $posts]);
     }
 }
-]
+```
+
 ## Crear Views, para la creación de pagina
 
 Ir al directorio: resources/views, Para este ejemplo, necesitas crear un archivo llamado index.blade.php dentro de un nuevo directorio posts.
 
+```
 <!-- resources/views/posts/index.blade.php -->
 
 @extends('layouts.app')
@@ -55,17 +58,20 @@ Ir al directorio: resources/views, Para este ejemplo, necesitas crear un archivo
         </div>
     @endforeach
 @endsection
+```
 
 ## Para crear la ruta de acceso web,
 
 Ir al directio: routes/web.php
 
+```
 <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
 Route::get('/posts', [PostController::class, 'index']);
+```
 
 ## Crear el Factory
 
