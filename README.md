@@ -71,6 +71,11 @@ Route::get('/posts', [PostController::class, 'index']);
 
 php artisan make:factory UsersFactory
 
+## Documentación con Boostrap
+
+- https://www.sourcecodester.com/tutorial/php/16601/laravel-10-paginate-db-table-data-bootstrap-tutorial
+- https://laravel.com/docs/10.x/views#main-content
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
