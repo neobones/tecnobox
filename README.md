@@ -39,6 +39,10 @@ class PostController extends Controller
 }
 ```
 
+Otra forma de agregar un controlado usando un modelo
+
+php artisan make:controller ProductController --resource --model=Product
+
 ## Crear Views, para la creación de pagina
 
 Ir al directorio: resources/views, Para este ejemplo, necesitas crear un archivo llamado index.blade.php dentro de un nuevo directorio posts.

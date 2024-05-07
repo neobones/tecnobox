@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Data Pagination</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
- 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -27,13 +27,15 @@
                             <td class="text-center">{{$user->user_id}}</td>
                             <td>{{$user->user_name}}</td>
                             <td>{{$user->user_email}}</td>
-                            <td>{{$user->tipoUsuario}}</td>
+                            <td>{{$user->tipo_usuario}}</td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
             {{$users->onEachSide(2)->links()}}
         </div>
-    </div>    
+
+        <?php echo Form::model($User, array('route' => array('user.update', $user->user_id))) ?>
+    </div>
 </body>
 </html>
